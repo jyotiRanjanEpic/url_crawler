@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { runUrlCrawlerV2 } = require("../runURLCrawlerV2");
+const { runUrlCrawlerV2 } = require("./runURLCrawlerV2");
 
 const urlcrawlerv2 = Router();
 
