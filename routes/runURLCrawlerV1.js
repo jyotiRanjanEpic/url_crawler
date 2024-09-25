@@ -73,7 +73,7 @@ async function checkJobStatus(id, url) {
 
     await driver.get(url);
 
-    await driver.wait(until.elementLocated(By.tagName('body')), 30000);
+    await driver.wait(until.elementLocated(By.tagName('body')), 9500);
 
     // Use executeScript to extract inner HTML of a dynamically loaded element
     const bodyText = await driver.executeScript(

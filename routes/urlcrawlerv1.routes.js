@@ -11,8 +11,7 @@ urlcrawlerv1.post("/urlcrawlerv1", async (req, res) => {
   }
 
   try {
-    // const results = await runUrlCrawlerV1(jobLinks);
-    const results = await Promise.all(jobLinks.map(job => checkJobStatus(job.id, job.link)));
+    const results = await runUrlCrawlerV1(jobLinks);
     res.status(200).json(results);
   } catch (error) {
     console.error("Error processing job links:", error);
